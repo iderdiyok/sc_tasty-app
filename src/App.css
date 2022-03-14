@@ -1,1 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+header nav h1 {
+  color: #ff6e86;
+}
