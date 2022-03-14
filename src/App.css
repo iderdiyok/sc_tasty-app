@@ -6,3 +6,9 @@ header nav h1 {
   background-color: #ff6e86;
   border: #ff6e86;
 }
+.form-control {
+  background-color: #ffac61;
+}
+input ::placeholder {
+  color: #ff6e86;
+}
