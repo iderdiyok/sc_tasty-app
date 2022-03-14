@@ -2,3 +2,7 @@
 header nav h1 {
   color: #ff6e86;
 }
+.btn-dark {
+  background-color: #ff6e86;
+  border: #ff6e86;
+}
