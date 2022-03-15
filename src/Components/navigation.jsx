@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import logo from "../tasty-logo.png"
 export default function Navigation(){
     return(
@@ -5,7 +6,9 @@ export default function Navigation(){
             <nav>
                 <div className="px-4 py-5 my-5 text-center">
                     <div className="col-5 col-md-2 mx-auto">
-                        <img className="mb-4 w-100" src={logo} alt="Tasty-Logo"/>
+                        <Link to="/">
+                            <img className="mb-4 w-100" src={logo} alt="Tasty-Logo"/>
+                        </Link>
                     </div>
                     
                     <h1 className="display-5 fw-bold">Find a recipe, an idea, an inspiration...</h1>

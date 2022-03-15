@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Category from './Components/categories';
+import Meal from './Components/meals';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -12,8 +13,8 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/categories/:strCategory" element={<Category />} />
-        {/* <Route path="/random" element={<App />} />
-        <Route path="/details" element={<App />} /> */}
+        <Route path="/random" element={<App />} />
+        <Route path="/meals/:idMeal" element={<Meal />} />
       </Routes>
     </React.StrictMode>
   </BrowserRouter>,
