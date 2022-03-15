@@ -12,5 +12,9 @@ header nav h1 {
 /* PLACEHOLDER FARBE ÄNDERN */
 /* ::placeholder {
   color: #ff6e86;
-  opacity: 1;
 } */
+input::placeholder {
+  color: #ff6e86;
+  /* background-color: #ff6e86; */
+  opacity: 1;
+}
