@@ -9,12 +9,14 @@ header nav h1 {
 .form-control {
   background-color: #ffac61;
 }
-/* PLACEHOLDER FARBE ÄNDERN */
-/* ::placeholder {
-  color: #ff6e86;
-} */
+
 input::placeholder {
-  color: #ff6e86;
-  /* background-color: #ff6e86; */
+  color: #ff6e86 !important;
   opacity: 1;
+}
+.even {
+  background-color: #ffac61;
+}
+.odd {
+  background-color: #ff6e86;
 }
