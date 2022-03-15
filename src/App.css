@@ -9,6 +9,8 @@ header nav h1 {
 .form-control {
   background-color: #ffac61;
 }
-input ::placeholder {
+/* PLACEHOLDER FARBE ÄNDERN */
+/* ::placeholder {
   color: #ff6e86;
-}
+  opacity: 1;
+} */
