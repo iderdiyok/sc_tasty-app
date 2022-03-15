@@ -7,8 +7,9 @@ header nav h1 {
   border: #ff6e86;
 }
 .form-control {
-  background-color: #ffac61;
+  background-color: rgba(255, 172, 97, 0.3);
 }
-input ::placeholder {
-  color: #ff6e86;
+::placeholder {
+  color: #ff6e86 !important;
+  opacity: 1;
 }
