@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
-header nav h1 {
-  color: #ff6e86;
-}
+
 .btn-dark {
   background-color: #ff6e86;
   border: #ff6e86;
@@ -13,9 +11,15 @@ header nav h1 {
   color: #ff6e86 !important;
   opacity: 1;
 }
-.even{
+.orange{
   background-color: #FFAC61;
 }
-.odd{
+.pink{
   background-color: #ff6e86;
+}
+.orange-text{
+  color: #FFAC61;
+}
+.pink-text{
+  color: #ff6e86;
 }
