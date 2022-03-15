@@ -13,3 +13,9 @@ header nav h1 {
   color: #ff6e86 !important;
   opacity: 1;
 }
+.even{
+  background-color: #FFAC61;
+}
+.odd{
+  background-color: #ff6e86;
+}
