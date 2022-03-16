@@ -24,3 +24,26 @@ input::placeholder {
 .pink-text {
   color: #ff6e86;
 }
+/* Footer */
+.flex {
+  display: flex;
+  list-style: none;
+}
+ul {
+  justify-content: center;
+  font-size: 2rem;
+  gap: 1rem;
+}
+footer ul li a {
+  color: #ff6e86;
+}
+footer ul li a:hover {
+  color: #ff6e86;
+}
+footer ul li:nth-of-type(2) a {
+  color: #ffac61;
+}
+
+footer ul li:hover {
+  font-size: 2.5rem;
+}
