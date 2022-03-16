@@ -33,7 +33,7 @@ export default function Home(){
                     )
                 })}
                 <div className="col">
-                    <div className="col rounded-3 even h-100 d-flex align-items-center justify-content-center"> 
+                    <div className="col rounded-3 pink h-100 d-flex align-items-center justify-content-center"> 
                         <div className="p-5 text-center">
                             <h1 className="fw-bold text-light">Random</h1>   
                         </div>

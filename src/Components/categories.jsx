@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Navigation from "./navigation";
 import { Link } from "react-router-dom";
+import Footer from "./footer";
 
 export default function Category(){
     let strCategory = useParams("strCategory")
@@ -42,6 +43,7 @@ export default function Category(){
                     })}
                 </div>
             </div>
+            <Footer/>
         </div>    
     )
 }

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Footer from "./footer";
 import Navigation from "./navigation";
 
 export default function Meal(){
@@ -37,6 +38,7 @@ export default function Meal(){
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>    
     )
 }
