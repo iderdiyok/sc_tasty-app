@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Category from './Components/categories';
 import Meal from './Components/meals';
+import Search from './Components/search';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -15,6 +16,7 @@ ReactDOM.render(
         <Route path="/categories/:strCategory" element={<Category />} />
         <Route path="/random" element={<App />} />
         <Route path="/meals/:idMeal" element={<Meal />} />
+        <Route path="/search/:input" element={<Search />} />
       </Routes>
     </React.StrictMode>
   </BrowserRouter>,
