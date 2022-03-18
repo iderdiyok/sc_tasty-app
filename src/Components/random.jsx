@@ -1,33 +1,29 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import Navigation from "./navigation";
 import Footer from "./footer";
 import Details from "./details";
 
-export default function Meal(){
-    let mealId = useParams("idMeal")
+export default function Random(){
 
-    const [meal, setMeal] = useState([])
+    const [random, setRandom] = useState([])
     useEffect(() => {
-        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId.idMeal}`)
+        fetch("https://www.themealdb.com/api/json/v1/1/random.php")
         .then( response => response.json() )
         .then(
             json => {
-                console.log(json.meals);
-                setMeal(json.meals[0])
+                setRandom(json.meals[0])
             }
         )   
         .catch(error => {
             console.log(error)
         })
 
-    }, [mealId.idMeal])
+    }, [])
 
-    
     return (
         <div>
             <Navigation />
-            <Details meals={meal} />
+            <Details meals={random} />
             <Footer />
         </div>
     )

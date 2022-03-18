@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -7,19 +7,27 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Category from './Components/categories';
 import Meal from './Components/meals';
 import Search from './Components/search';
+import Random from './Components/random';
 
+const loadingMarkup = (
+  <div className="py-4 text-center">
+    <h2>Loading..</h2>
+  </div>
+)
 ReactDOM.render(
-  <BrowserRouter>
-    <React.StrictMode>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/categories/:strCategory" element={<Category />} />
-        <Route path="/random" element={<App />} />
-        <Route path="/meals/:idMeal" element={<Meal />} />
-        <Route path="/search/:input" element={<Search />} />
-      </Routes>
-    </React.StrictMode>
-  </BrowserRouter>,
+  <Suspense fallback={loadingMarkup}>
+    <BrowserRouter>
+      <React.StrictMode>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/categories/:strCategory" element={<Category />} />
+          <Route path="/random" element={<Random />} />
+          <Route path="/meals/:idMeal" element={<Meal />} />
+          <Route path="/search/:input" element={<Search />} />
+        </Routes>
+      </React.StrictMode>
+    </BrowserRouter>
+  </Suspense>,
   document.getElementById('root')
 );
 

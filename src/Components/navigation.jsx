@@ -1,17 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom"
 import logo from "../tasty-logo.png"
 export default function Navigation() {
-
-
-    const [data, setData] = useState([]);
     const [input, setInput] = useState();
-
 
     function handleSubmit(event) {
         event.preventDefault()
     }
-
 
     return (
         <header>
@@ -28,8 +23,8 @@ export default function Navigation() {
                         <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
                             <form className="d-md-flex" onSubmit={handleSubmit}>
                                 <input className="form-control me-2 col-md-8" type="search" placeholder="Type something to search" aria-label="Search" onChange={(e) => setInput(e.target.value)} />
-                                <Link to={`/search/${input}`}>
-                                    <button className="btn col-md-4 btn-dark" type="submit" >Search</button>
+                                <Link to={`/search/${input}`} className="col-md-4">
+                                    <button className="btn btn-dark" type="submit" >Search</button>
                                 </Link>
                             </form>
                         </div>

@@ -1,49 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
 .btn-dark {
   background-color: #ff6e86;
   border: #ff6e86;
 }
 .form-control {
-  background-color: #ffac61;
+  background-color: rgba(255, 172, 97, 0.3);
 }
-
-input::placeholder {
+::placeholder {
   color: #ff6e86 !important;
   opacity: 1;
 }
-.orange {
-  background-color: #ffac61;
+.orange{
+  background-color: #FFAC61;
+  border-radius: 20px;
 }
-.pink {
+.pink{
+  background-color: #ff6e86;
+  border-radius: 20px;
+}
+.orange-text{
+  color: #FFAC61;
+}
+.pink-text{
+  color: #ff6e86;
+}
+.box-pading{
+  padding: 2em;
+  transition: all 200ms ease-in-out;
+}
+.box-pading:hover{
+  padding: 1em;
+}
+.boot{
+  background-color: #FFAC61;
+}
+.boot:nth-of-type(4n+1){
   background-color: #ff6e86;
 }
-.orange-text {
-  color: #ffac61;
+.boot:nth-of-type(4n+4){
+  background-color: #ff6e86;
 }
-.pink-text {
-  color: #ff6e86;
-}
+
 /* Footer */
-.flex {
-  display: flex;
-  list-style: none;
-}
-ul {
-  justify-content: center;
-  font-size: 2rem;
-  gap: 1rem;
-}
-footer ul li a {
-  color: #ff6e86;
-}
 footer ul li a:hover {
   color: #ff6e86;
 }
-footer ul li:nth-of-type(2) a {
-  color: #ffac61;
-}
-
 footer ul li:hover {
-  font-size: 2.5rem;
+  transform: scale(1.3);
 }
