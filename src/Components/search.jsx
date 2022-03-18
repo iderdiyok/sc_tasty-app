@@ -28,7 +28,7 @@ export default function Search() {
                     <div className="row mb-3">
                         <h1 className="orange-text">{data ? `${data.length} results found for ${input.input}` : 'Not Found'}</h1>
                     </div>
-                    <CategoryList list={data} />
+                    {data ? <CategoryList list={data} /> : "NotFound"}
                 </div>
             </div>
             <Footer />
