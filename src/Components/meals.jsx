@@ -13,7 +13,6 @@ export default function Meal(){
         .then( response => response.json() )
         .then(
             json => {
-                console.log(json.meals);
                 setMeal(json.meals[0])
             }
         )   

@@ -28,9 +28,9 @@ export default function Navigation() {
                             >
                                 Find a recipe, an idea, an inspiration...
                             </motion.h1>
-                            <div className="col-7 mx-auto">
+                            <div className="col-md-7 mx-auto">
                                 <div className="d-sm-flex justify-content-sm-center">
-                                    <motion.form className="d-md-flex col-6" onSubmit={handleSubmit}
+                                    <motion.form className="d-md-flex col-md-6" onSubmit={handleSubmit}
                                         drag
                                         dragElastic={1.2}
                                     >

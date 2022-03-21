@@ -23,14 +23,14 @@ export default function Search() {
     return (
         <div>
             <Navigation />
-            <div className="container">
+            <main className="container">
                 <div className="col-md-10 col-lg-9 mx-auto mx-auto">
                     <div className="row mb-3">
                         <h1 className="orange-text">{data ? `${data.length} results found for ${input.input}` : 'Not Found'}</h1>
                     </div>
                     {data ? <CategoryList list={data} /> : "NotFound"}
                 </div>
-            </div>
+            </main>
             <Footer />
         </div>
     )

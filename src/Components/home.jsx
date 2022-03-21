@@ -15,7 +15,7 @@ export default function Home(){
     },[])
 
     return (
-        <div className="container">
+        <main className="container">
             <div className="col-md-10 col-lg-9 mx-auto">
                 <div className="row mb-3">
                     <h1 className="pink-text fw-bold">Or go through our categories</h1>
@@ -56,6 +56,6 @@ export default function Home(){
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     )
 }

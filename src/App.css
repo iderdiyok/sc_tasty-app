@@ -20,6 +20,7 @@
 .orange{
   background-color: #FFAC61;
   border-radius: 20px;
+  min-height: 250px;
 }
 .pink{
   background-color: #ff6e86;
