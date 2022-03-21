@@ -8,6 +8,7 @@ import Category from './Components/categories';
 import Meal from './Components/meals';
 import Search from './Components/search';
 import Random from './Components/random';
+import '../node_modules/react-modal-video/css/modal-video.css';
 
 const loadingMarkup = (
   <div className="py-4 text-center">

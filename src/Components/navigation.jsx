@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"
 import logo from "../tasty-logo.png"
+import { motion } from "framer-motion";
+
 export default function Navigation() {
     const [input, setInput] = useState();
 
@@ -11,22 +13,34 @@ export default function Navigation() {
     return (
         <header>
             <nav>
-                <div className="px-4 py-5 my-5 text-center">
-                    <div className="col-5 col-md-2 mx-auto">
-                        <Link to="/">
-                            <img className="mb-4 w-100" src={logo} alt="Tasty-Logo" />
-                        </Link>
-                    </div>
-
-                    <h1 className="pink-text display-5 fw-bold">Find a recipe, an idea, an inspiration...</h1>
-                    <div className="col-6 mx-auto">
-                        <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                            <form className="d-md-flex" onSubmit={handleSubmit}>
-                                <input className="form-control me-2 col-md-8" type="search" placeholder="Type something to search" aria-label="Search" onChange={(e) => setInput(e.target.value)} />
-                                <Link to={`/search/${input}`} className="col-md-4">
-                                    <button className="btn btn-dark" type="submit" >Search</button>
+                <div className="container">
+                    <div className="row">
+                        <div className="py-5 my-5 text-center">
+                            <div className="col-4 col-md-2 mx-auto">
+                                <Link to="/">
+                                    <img className="mb-4 w-100" src={logo} alt="Tasty-Logo"/>
                                 </Link>
-                            </form>
+                            </div>
+
+                            <motion.h1 className="pink-text display-4 fw-bold mb-4" 
+                                drag
+                                dragElastic={1.2}
+                            >
+                                Find a recipe, an idea, an inspiration...
+                            </motion.h1>
+                            <div className="col-7 mx-auto">
+                                <div className="d-sm-flex justify-content-sm-center">
+                                    <motion.form className="d-md-flex col-6" onSubmit={handleSubmit}
+                                        drag
+                                        dragElastic={1.2}
+                                    >
+                                        <input className="form-control col-md-8 border-0" type="search" placeholder="Type something to search" aria-label="Search" onChange={(e) => setInput(e.target.value)} />
+                                        <Link to={`/search/${input}`} className="col-md-4">
+                                            <button className="btn fw-bold rounded-3 px-4 pink text-light" type="submit" >Search</button>
+                                        </Link>
+                                    </motion.form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,10 @@
+import { useState } from 'react';
+import ModalVideo from 'react-modal-video';
+import { motion } from "framer-motion";
+
 export default function Details(props){
-    
+    const [show, setShow] = useState(false)
+
     function instructionsToList(){
         const instArray = props.meals.strInstructions.split(".")
         instArray.pop();
@@ -8,6 +13,7 @@ export default function Details(props){
                 {item}.
             </li>
         );
+        console.log( props.meals.strYoutube.slice(32) );
         return(
             
             <ul>{listItems}</ul>
@@ -43,9 +49,13 @@ export default function Details(props){
     return(
         <div className="container">
                 <div className="row">
-                    <div className="col-sm-11 col-md-8 mx-auto p-5 h-100 p-3 pink">
+                    <motion.div className="col-md-10 col-lg-9 mx-auto p-5 h-100 p-3 pink"
+                        initial={{scale: 0.1, opacity:0}}
+                        animate={{scale: 1, opacity: 1}}
+                        transition={{type: 'spring', stiffness: 200, duration:2.5, delay:0.2}}
+                    >
                             <div className="col mb-5">
-                                <img src={props.meals.strMealThumb} alt="Meal" className="w-100"/>
+                                <img src={props.meals.strMealThumb} alt="Meal" className="w-100 h-75"/>
                                 <h6 className="mt-2 text-light fw-bold">
                                     <span className="me-3">{props.meals.strArea} Dish</span>
                                     <span>Category: {props.meals.strCategory}</span>
@@ -60,13 +70,20 @@ export default function Details(props){
                                 <div className="col col-lg-3">
                                     <h1 className="fw-bold text-light mb-5">Ingredients</h1>
                                     { props.meals.strIngredient1 ? ingredientAndMeasure() : null}
-                                    <div className="mt-4 p-3 bg-light rounded-3 text-center">
-                                        <a href={props.meals.strYoutube} target="_blank" rel="noopener noreferrer" className="pink-text text-decoration-none fw-bold">Watch on YouTube</a>
-                                    </div>
+                                    <motion.button 
+                                        type='button' 
+                                        className="border-0 mt-4 px-5 py-3 bg-light orange text-center pink-text text-decoration-none fw-bold fs-5" 
+                                        onClick={() => setShow(true)}
+                                        whileHover={{ scale: 1.1 }}
+                                        transition={{type: 'spring', stiffness: 100}}
+                                    >
+                                        Watch Video
+                                    </motion.button>
                                 </div>
                             </div>
-                    </div>
+                    </motion.div>
                 </div>
+                <ModalVideo channel='youtube' autoplay isOpen={show} videoId={props.meals.strYoutube ? props.meals.strYoutube.slice(32): null} onClose={() => setShow(false)} />
             </div>
     )
 }

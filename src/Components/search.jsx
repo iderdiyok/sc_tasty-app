@@ -24,7 +24,7 @@ export default function Search() {
         <div>
             <Navigation />
             <div className="container">
-                <div className="col-md-10 col-lg-8 mx-auto">
+                <div className="col-md-10 col-lg-9 mx-auto mx-auto">
                     <div className="row mb-3">
                         <h1 className="orange-text">{data ? `${data.length} results found for ${input.input}` : 'Not Found'}</h1>
                     </div>

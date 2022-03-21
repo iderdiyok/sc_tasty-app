@@ -23,9 +23,9 @@ export default function Category(){
         <div>
             <Navigation />
             <div className="container">
-                <div className="col-md-10 col-lg-8 mx-auto">
+                <div className="col-md-10 col-lg-9 mx-auto">
                     <div className="row mb-3">
-                        <h1 className="orange-text">Everything {strCategory.strCategory}</h1>
+                        <h1 className="orange-text fw-bold">Everything {strCategory.strCategory}</h1>
                     </div>
                     <CategoryList list={category} />
                 </div>

@@ -33,7 +33,7 @@
 }
 .box-pading{
   padding: 2em;
-  transition: all 200ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 .box-pading:hover{
   padding: 1em;
