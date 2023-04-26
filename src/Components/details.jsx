@@ -54,7 +54,7 @@ export default function Details(props){
                     transition={{type: 'spring', stiffness: 200, duration:2.5, delay:0.2}}
                 >
                         <div className="col-md-6 col-sm-10 mx-auto mb-5">
-                            <img src={props.meals.strMealThumb} alt="Meal" className="w-100 h-75"/>
+                            <img src={props.meals.strMealThumb} alt="Meal" className="w-100 h-75 rounded"/>
                             <h6 className="mt-2 text-light fw-bold">
                                 <span className="me-3">{props.meals.strArea} Dish</span>
                                 <span>Category: {props.meals.strCategory}</span>
