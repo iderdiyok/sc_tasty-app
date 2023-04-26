@@ -48,12 +48,12 @@ export default function Details(props){
     return(
         <main className="container">
             <div className="row">
-                <motion.div className="col-md-10 col-lg-9 mx-auto p-5 h-100 p-3 pink"
+                <motion.div className="col-md-10 col-lg-12 mx-auto p-5 h-100 p-3 pink"
                     initial={{scale: 0.1, opacity:0}}
                     animate={{scale: 1, opacity: 1}}
                     transition={{type: 'spring', stiffness: 200, duration:2.5, delay:0.2}}
                 >
-                        <div className="col mb-5">
+                        <div className="col-6 mx-auto mb-5">
                             <img src={props.meals.strMealThumb} alt="Meal" className="w-100 h-75"/>
                             <h6 className="mt-2 text-light fw-bold">
                                 <span className="me-3">{props.meals.strArea} Dish</span>
